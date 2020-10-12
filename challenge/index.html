@@ -10,18 +10,162 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Movie Homepage</title>
+    <title>Travel Now</title>
+    <style>
+        .jumbotron {
+            background-image: url("img/prater-427925_1920.jpg");
+            height: 50%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .grey-box {
+            background-color: rgba(240, 248, 255, 0.8);
+            border: 2px solid lightgrey round;
+            border-radius: 5px;
+        }
+
+        .carousel-item>img {
+            height: 45rem;
+        }
+        .google-maps {
+            position: relative;
+            padding-bottom: 75%;
+            /* This is the aspect ratio */
+            height: 0;
+            overflow: hidden;
+        }
+
+        .google-maps iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100% !important;
+            height: 100% !important;
+        }
+    </style>
 </head>
 
 
 <body>
+    
+
+    <!-- carosel header -->
+    <head>
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner ">
+                <!-- 5 images with text and a 2 second interval -->
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="img/beach-5531919_1920.jpg" alt="First slide">
+                    <div class="carousel-caption d-none d-md-block grey-box">
+                        <h5 class="text-dark">Beaches of Africa</h5>
+                        <p class="text-dark">Come visit these locations with us!</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="img/lake-5509721_1920.jpg" alt="Second slide">
+                    <div class="carousel-caption d-none d-md-block grey-box">
+                        <h5 class="text-dark">Beaches of Africa</h5>
+                        <p class="text-dark">Come visit these locations with us!</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="img/matterhorn-3019429_1920.jpg" alt="Third slide">
+                    <div class="carousel-caption d-none d-md-block grey-box">
+                        <h5 class="text-dark">Beaches of Africa</h5>
+                        <p class="text-dark">Come visit these locations with us!</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="img/tree-5491570_1920.jpg" alt="Forth slide">
+                    <div class="carousel-caption d-none d-md-block grey-box">
+                        <h5 class="text-dark">Beaches of Africa</h5>
+                        <p class="text-dark">Come visit these locations with us!</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="img/venice-5082785_1920.jpg" alt="Fifth slide">
+                    <div class="carousel-caption d-none d-md-block grey-box">
+                        <h5 class="text-dark">Beaches of Africa</h5>
+                        <p class="text-dark">Come visit these locations with us!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </head>
+
+    <!-- standard sticky navbar over the carosel -->
+    <nav class="container navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand text-danger" href="#">Travel Now!</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
 
 
+    <hr>
+    <!-- img with text -->
+    <div class="container jumbotron">
+        <div class="grey-box">
+            <h1 class="display-4">Our location </h1>
+            <p class="lead">Come and book your appointment with us at our local one stop travel angency.</p>
+            <hr class="my-4">
+        </div>
+    </div>
+    <hr>
+    <!-- embeded google maps -->
+    <div class="container">
+        <!-- prater location -->
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2235.5675995194865!2d16.39818939283505!3d48.21522727201791!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476d073f4daba163%3A0xfce7699ce9a8b1f4!2sPrater!5e0!3m2!1sen!2sat!4v1602508948294!5m2!1sen!2sat"
+            class="w-100" height="400rem" frameborder="0" style="border:0">
+        </iframe>
+    </div>
+
+    <hr>
 
     <main class="container">
-
+        <div class="card mb-3">
+            <img class="card-img-top" style="max-height: 30rem;" src="img/beach-5531919_1920.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Beaches in all directions!</h5>
+                <p class="card-text">Come and explore the never ending coast of Africa.</p>
+                <p class="card-text"><small class="text-danger">book now</small></p>
+            </div>
+        </div>
 
     </main>
+
 
 
 
@@ -38,7 +182,7 @@
         crossorigin="anonymous"></script>
 
     <!-- Optional JavaScript -->
-
+    <script src="script.js"></script>
 
 </body>
 
