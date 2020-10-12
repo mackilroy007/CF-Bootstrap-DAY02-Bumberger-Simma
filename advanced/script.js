@@ -6,30 +6,27 @@ console.table(actors);
 // fill json data into html
 $(document).ready(function(){
 
-
     for (let i = 0; i < actors.length; i++){
-        $(".actorCard").append(`
-        <div id="${i}" class="col card">
-            <h5 class="card-title">${actors[i].name}</h5>
-            <img src="${actors[i].image}" class="card-img-top w-50 rounded mx-auto d-block " alt="...">
+        $(".navBar").append(`
+            <a class="nav-link actorLink" id="${i}"{href="#"> ${actors[i].name}</a>
+        `)
+
+    };
+
+    // event & display actor
+    $(".actorLink").on('click', function(){
+        // create a variable that refers to the index of the navbar
+        let index = $(this).attr("id");
+        // create card with the index from json (same index number)
+        $(".actorCard").html(`
+        <div class="col card">
+            <h5 class="card-title">${actors[index].name}</h5>
+            <img src="${actors[index].image}" class="card-img-top w-50 rounded mx-auto d-block " alt="...">
             <div class="card-body">
-                <p class="card-text"> Born: ${actors[i].birthday}</p>
-                <a href="${actors[i].imdb}" class="btn btn-primary">IMDB</a>
+                <p class="card-text"> Born: ${actors[index].birthday}</p>
+                <a href="${actors[index].imdb}" class="btn btn-primary">IMDB</a>
             </div>
         </div>
         `);
-    };
-
-    
+    });
 });
-
-    
-
-//create eventlistener for navbar
-
-
-/*$(".fa-thumbs-up").on('click', function(){
-    let index = $(this).attr("id");
-    let newLikes = movieData[index].likes += 1;
-    $(this).siblings().last().html(`${newLikes}`);
-});*/
